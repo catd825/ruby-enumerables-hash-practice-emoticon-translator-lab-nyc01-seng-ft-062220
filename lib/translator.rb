@@ -20,13 +20,12 @@ end
 
 
 
-def get_japanese_emoticon (yml, eng_emoticon) 
-  library = load_library(yml) 
-    library.each do |emotion, emoticon| 
-      return emoticon[:japanese] if emoticon[:english] == eng_emoticon 
-            # binding.pry
+def get_japanese_emoticon (yml, eng_emoticon) #pass through file path and english emoticon
+  library = load_library(yml) #create library variable equal to the load_library helper method created earlier (to convert YML file into hash)
+    library.each do |emotion, emoticon| #iterate over library with emotion as the key and emoticon as the value
+      return emoticon[:japanese] if emoticon[:english] == eng_emoticon #return the japanese emoticon if the associated english emoticon passed through exists in YML file
     end
-  "Sorry, that emoticon was not found" 
+  "Sorry, that emoticon was not found" #error if emoticon does not exist 
 end
 
 
