@@ -21,13 +21,9 @@ def get_japanese_emoticon (yml, west_emo) #pass through file path and western em
 
   library = load_library(yml) 
   
-    #define variable library as passing the YML file through previously created load_library method, which converts the YML file into a nested hash
-    
-    library.each do |definition, emo_hash| 
+    library.each do |key, value| 
       
-      #iterate over the nested hash, using the definition and the emoticon hash (hash contains :eng => emoticon, :jap => emoticon)
-    
-      return definition[:japanese] if emo_hash[:english] == west_emo 
+      return value[:japanese] if key[:english] == west_emo 
       
       #if the english emoticon entered exists, return associated japanese emoticon
     
