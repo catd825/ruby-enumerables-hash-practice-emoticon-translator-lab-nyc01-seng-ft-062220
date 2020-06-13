@@ -17,7 +17,7 @@ end
 
 
 
-def get_japanese_emoticon (yml, emoticon)
+def get_japanese_emoticon (yml, eng_emo)
  
   library = load_library(yml)
   emoticon = library.keys.find do |key|
@@ -28,7 +28,7 @@ def get_japanese_emoticon (yml, emoticon)
 end
 
 
-def get_english_meaning(yml, emoticon)
+def get_english_meaning(yml, jap_emo)
   # code goes here
   
   emoticon = library.keys.find do |key|
