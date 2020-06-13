@@ -27,7 +27,7 @@ def get_japanese_emoticon (yml, west_emo) #pass through file path and western em
       
       #iterate over the nested hash, using the definition and the emoticon hash (hash contains :eng => emoticon, :jap => emoticon)
     
-      return definition[:japanese] if emo_hash[:english] == eng_emo 
+      return definition[:japanese] if emo_hash[:english] == west_emo 
       
       #if the english emoticon entered exists, return associated japanese emoticon
     
@@ -43,6 +43,7 @@ end
 
 def get_english_meaning(yml, jap_emo)
   # code goes here
+  
   library = load_library(yml)
     library.each do |english_def, emoticon|
       return english_def if emoticon[:japanese] == jap_emo
