@@ -17,18 +17,12 @@ end
 
 
 
-def get_japanese_emoticon (yml, west_emo) #pass through file path and western emoticon
-
+def get_japanese_emoticon (yml, west_emo) 
   library = load_library(yml) 
-  
     library.each do |key, value| 
-      
       return value[:japanese] if key[:english] == west_emo 
-      
     end
-
-     
-  "Sorry, that emoticon was not found" #error message if english emoticon entered does not exist
+  "Sorry, that emoticon was not found" 
 end
 
 
