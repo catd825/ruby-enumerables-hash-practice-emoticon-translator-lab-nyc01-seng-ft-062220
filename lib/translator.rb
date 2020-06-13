@@ -17,7 +17,7 @@ end
 
 
 
-def get_japanese_emoticon (load_library, emoticon)
+def get_japanese_emoticon (yml, emoticon)
   # code goes here
   binding.pry
 end
