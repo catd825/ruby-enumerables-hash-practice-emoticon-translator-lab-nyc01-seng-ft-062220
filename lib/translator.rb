@@ -24,7 +24,7 @@ def get_japanese_emoticon (yml, eng_emoticon)
   library = load_library(yml) 
     library.each do |emotion, emoticon| 
              binding.pry
-      return emoticon[:japanese] if emotion[:english] == eng_emoticon 
+      return emoticon[:japanese] if emoticon[:english]== eng_emoticon 
 
     end
   "Sorry, that emoticon was not found" 
