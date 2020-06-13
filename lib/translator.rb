@@ -12,9 +12,9 @@ emoticons = YAML.load_file(yml)
     :japanese => emoticon[1]
     }
   
-  binding.pry  
+  #binding.pry  
   end
-
+  new_hash
 end
 
 
