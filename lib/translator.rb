@@ -24,6 +24,7 @@ def get_japanese_emoticon (yml, eng_emo)
     end
   "Sorry, that emoticon was not found"
 end
+binding.pry
 
 
 def get_english_meaning(yml, jap_emo)
