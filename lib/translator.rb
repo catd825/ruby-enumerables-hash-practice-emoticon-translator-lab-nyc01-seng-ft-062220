@@ -8,10 +8,8 @@ def load_library
 emoticons = YML.load_file('emoticons.yml')
 emoticons
 
-binding.pry
-
-
 end
+binding.pry
 
 
 def get_japanese_emoticon
