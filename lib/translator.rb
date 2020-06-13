@@ -16,11 +16,11 @@ end
 
 
 
-def get_japanese_emoticon
+def get_japanese_emoticon (yml, emoticon)
   # code goes here
   binding.pry
 end
 
-def get_english_meaning
+def get_english_meaning(yml, emoticon)
   # code goes here
 end
