@@ -17,11 +17,11 @@ end
 
 
 
-def get_japanese_emoticon(yml, new_hash)
+def get_japanese_emoticon(load_library, new_hash)
   # code goes here
   
 end
 
-def get_english_meaning (yml, new_hash)
+def get_english_meaning (load_library, new_hash)
   # code goes here
 end
