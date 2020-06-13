@@ -15,11 +15,9 @@ emoticons = YAML.load_file(yml) #declare emoticons as variable for YAML file pat
     }
     
   end 
-  
-  
   new_hash #must return new hash
 end
-
+binding.pry
 
 
 def get_japanese_emoticon (yml, eng_emoticon) 
