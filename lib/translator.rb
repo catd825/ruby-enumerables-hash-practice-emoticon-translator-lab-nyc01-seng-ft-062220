@@ -4,15 +4,14 @@ require 'yaml'
 def load_library(yml)
   # code goes here - should return hash where each key is the name of an emoticon.  each emoticon name should poin tto a nested hash containing an :english key and a :japanese key and point to the english/japanese versions of the emoticon.
 
-emoticons = YAML.load_file(yml)
+emoticons = YAML.load_file(yml) #declare emoticons as variable for YAML
   new_hash = {} #create new hash of YML data
-  emoticons.each do |emotion, emoticon| #
-    new_hash[emotion] = {
-      :english => emoticon[0], 
-    :japanese => emoticon[1]
+  emoticons.each do |emotion, emoticon| #iterates over emoticons =, emotion as key and emoticon as value 
+    new_hash[emotion] = {   #update empty new hash as 
+      :english => emoticon[0], #english key accesses first element of emoticon array
+    :japanese => emoticon[1] #japanese key accesses second element of emoticon array
     }
-  end
-  new_hash
+  end #must return new hash
 end
 
 
