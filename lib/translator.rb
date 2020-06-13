@@ -17,7 +17,7 @@ end
 
 
 
-def get_japanese_emoticon(load_library, new_hash)
+def get_japanese_emoticon
   # code goes here
   binding.pry
 end
