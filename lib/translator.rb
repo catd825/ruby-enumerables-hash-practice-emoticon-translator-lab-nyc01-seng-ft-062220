@@ -18,9 +18,14 @@ end
 
 
 def get_japanese_emoticon (yml, emoticon)
-  # code goes here
-  binding.pry
+  library = load_library(yml)
+  
+  emoticon = library.keys.find do |key|
+    library[key][:english] == emoticon
+  end
+  emoticon ? library[emoticon][:japanese] : "Sorry, that emoticon was not found"
 end
+
 
 def get_english_meaning(yml, emoticon)
   # code goes here
