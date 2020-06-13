@@ -9,7 +9,7 @@ emoticons = YAML.load_file(yml) #declare emoticons as variable for YAML
   emoticons.each do |emotion, emoticon| #iterates over emoticons =, emotion as key and emoticon as value 
     new_hash[emotion] = {   #update empty new hash as 
       :english => emoticon[0], #english key accesses first element of emoticon array
-    :japanese => emoticon[1] #japanese key accesses second element of emoticon array
+      :japanese => emoticon[1] #japanese key accesses second element of emoticon array
     }
   end 
   binding.pry
