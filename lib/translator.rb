@@ -23,10 +23,9 @@ def get_japanese_emoticon (yml, emoticon)
   emoticon = library.keys.find do |key|
     library[key][:english] == emoticon
     
-
   end
   emoticon ? library[emoticon][:japanese] : "Sorry, that emoticon was not found"
-    binding.pry
+
 end
 
 
