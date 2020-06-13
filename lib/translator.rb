@@ -1,5 +1,5 @@
 require 'pry'
-require "yaml"
+require 'yaml'
 
 def load_library
   # code goes here - should return hash where each key is the name of an emoticon.  each emoticon name should poin tto a nested hash containing an :english key and a :japanese key and point to the english/japanese versions of the emoticon.
