@@ -29,7 +29,7 @@ end
 
 def get_english_meaning(yml, jap_emo)
   # code goes here
-  library = load_library('./lib/emoticons.yml')
+  library = load_library(yml)
     library.each do |meaning, idioms|
       return meaning if idioms[:japanese] == jap_emo
     end
