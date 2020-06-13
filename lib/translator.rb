@@ -19,7 +19,7 @@ end
 
 def get_japanese_emoticon(load_library, new_hash)
   # code goes here
-  
+  binding.pry
 end
 
 def get_english_meaning (load_library, new_hash)
