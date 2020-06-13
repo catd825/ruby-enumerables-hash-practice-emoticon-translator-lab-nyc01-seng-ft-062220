@@ -7,8 +7,10 @@ def load_library(yml)
 emoticons = YAML.load_file(yml)
 emoticons
 
+binding.pry
+
 end
-#binding.pry
+
 
 
 def get_japanese_emoticon
