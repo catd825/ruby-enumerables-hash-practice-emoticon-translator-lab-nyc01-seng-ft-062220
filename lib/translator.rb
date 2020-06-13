@@ -31,9 +31,11 @@ def get_japanese_emoticon (yml, west_emo) #pass through file path and western em
       
       #if the english emoticon entered exists, return associated japanese emoticon
     
-    binding.pry
+
     
     end
+     binding.pry
+     
   "Sorry, that emoticon was not found" #error message if english emoticon entered does not exist
 end
 
