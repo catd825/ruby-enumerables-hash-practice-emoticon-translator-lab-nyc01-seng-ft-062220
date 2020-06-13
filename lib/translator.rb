@@ -24,8 +24,7 @@ def get_japanese_emoticon (yml, emoticon)
     library[key][:english] == emoticon
     
   end
-  emoticon ? library[emoticon][:japanese] : "Sorry, that emoticon was not found"
-
+  "Sorry, that emoticon was not found"
 end
 
 
