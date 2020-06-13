@@ -6,11 +6,9 @@ def load_library(yml)
 
 emoticons = YAML.load_file(yml)
 
-emoticons.each_with_object({}) do |emotion, emoticon|
-  
-end
-
-binding.pry
+  emoticons.each_with_object({}) do |emotion, emoticon|
+  binding.pry  
+  end
 
 end
 
