@@ -5,9 +5,9 @@ def load_library(yml)
 
 emoticons = YAML.load_file(yml) #declare emoticons as variable for YAML file path
   
-  new_hash = {} #create new hash of YML data
+  new_hash = {} #method needs to create new hash
   
-  emoticons.each do |emotion, emoticon| #iterates over emoticons =, emotion as key and emoticon as value 
+  emoticons.each do |emotion, emoticon| #iterates over emoticons, emotion as key and emoticon as value 
   
     new_hash[emotion] = {   #update empty new hash as 
       :english => emoticon[0], #english key accesses first element of emoticon array
@@ -23,10 +23,10 @@ end
 
 
 
-def get_japanese_emoticon (yml, west_emo) 
+def get_japanese_emoticon (yml, eng_emoticon) 
   library = load_library(yml) 
-    library.each do |key, value| 
-      return value[:japanese] if key[:english] == west_emo 
+    library.each do |emotion, emoticon| 
+      return emoticon[:japanese] if emotion[:english] == eng_emoticon 
     end
   "Sorry, that emoticon was not found" 
 end
@@ -37,8 +37,8 @@ def get_english_meaning(yml, jap_emo)
   # code goes here
   
   library = load_library(yml)
-    library.each do |english_def, emoticon|
-      return english_def if emoticon[:japanese] == jap_emo
+    library.each do |eng_emotion, emoticon|
+      return eng_emotion if emoticon[:japanese] == jap_emo
     end
   "Sorry, that emoticon was not found"
 end
