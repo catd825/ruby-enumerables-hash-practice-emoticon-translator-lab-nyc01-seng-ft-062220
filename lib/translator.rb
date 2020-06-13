@@ -11,7 +11,8 @@ emoticons = YAML.load_file(yml) #declare emoticons as variable for YAML
       :english => emoticon[0], #english key accesses first element of emoticon array
     :japanese => emoticon[1] #japanese key accesses second element of emoticon array
     }
-  end #must return new hash
+  end 
+  new_hash #must return new hash
 end
 
 
