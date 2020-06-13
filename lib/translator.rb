@@ -2,7 +2,7 @@ require 'pry'
 require 'yaml'
 
 def load_library(yml)
-  # code goes here - should return hash where each key is the name of an emoticon.  each emoticon name should poin tto a nested hash containing an :english key and a :japanese key and point to the english/japanese versions of the emoticon.
+  # code goes here - should return hash where each key is the name of an emoticon.  each emoticon name should point to a nested hash containing an :english key and a :japanese key and point to the english/japanese versions of the emoticon.
 
 emoticons = YAML.load_file(yml) #declare emoticons as variable for YAML
   new_hash = {} #create new hash of YML data
@@ -17,9 +17,9 @@ end
 
 
 
-def get_japanese_emoticon (yml, eng_emo)
-  library = load_library(yml)
-    library.each do |definition, emo_hash|
+def get_japanese_emoticon (yml, eng_emo) #pass through file path and english emoticon
+  library = load_library(yml) #define variable library as passing the YML file through previously created load_library method, which converts the YML file into a nested hash
+    library.each do |definition, emo_hash| #iterate over the nested hash, using the definition and the emoticon hash 
       return definition[:japanese] if emo_hash[:english] == eng_emo
     binding.pry
     end
