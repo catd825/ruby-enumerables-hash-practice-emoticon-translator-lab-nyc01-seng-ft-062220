@@ -17,7 +17,8 @@ end
 
 
 
-def get_japanese_emoticon (yml, eng_emo) #pass through file path and english emoticon
+def get_japanese_emoticon (yml, west_emo) #pass through file path and western emoticon
+
   library = load_library(yml) 
   
     #define variable library as passing the YML file through previously created load_library method, which converts the YML file into a nested hash
